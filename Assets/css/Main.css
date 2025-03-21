@@ -1,4 +1,64 @@
-/* IMPORTS A "GOOGLE FONT" FROM THE GOOGLE SERVERS */
+input.error {
+  border: 2px solid red;
+  background-color: #bc1a1a;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  display: block;
+}
+.label {
+  font-weight: 700;
+  color: red;
+  font-size: 12px;
+  display: block;
+}
+/* VARIABLES */
+:root {
+  --blue-light: #4ae;
+  --blue-dark: #158;
+  --red-light: #f44;
+  --red-medium: #c00;
+  --red-dark: #900;
+  --green-light: #8d8;
+  --green-dark: #585;
+}
+/* THE FORM */
+form {
+  max-width: 600px;
+  margin: auto;
+  background-color: var purple;
+}
+/* "FLEX - CONTAINER" */
+fieldset {
+  background-color: var purple;
+  display: flex;
+  flex-direction: column;
+}
+/* PSEUDO SELECTORS? ("LAST OF TYPE") */
+fieldset:last-of-type {
+  border-bottom-color: #4f073b;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  border: none;
+}
+fieldset:last-of-type input:first-of-type {
+  background-color: var(--blue-light);
+}
+fieldset:last-of-type input:last-of-type {
+  background-color: var(--purple);
+}
+/* BOTH INPUTS & TEXTAREAS */
+input,
+textarea {
+  resize: none;
+  margin: 0;
+  padding: 1rem 0.5rem;
+  margin-bottom: 1rem;
+}
+/* /* IMPORTS A "GOOGLE FONT" FROM THE GOOGLE SERVERS
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;500;600;700;800&display=swap");
 /* IMPORTS A "LOCAL FILE" */
 @import url(nav.css);

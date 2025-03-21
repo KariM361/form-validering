@@ -3,9 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Form validering</title>
     <link rel="stylesheet" href="Assets/css/Main.css" />
-    <script src="Assets/Js/index.js" defer></script>
+    <link rel="stylesheet" href="Assets/Js/script.js" defer />
   </head>
-  <body></body>
+  <body>
+    <h1>Form validering</h1>
+    <form action="thanks.html">
+      <!-- FIELDSET ER "FLEXET" -->
+      <fieldset>
+        <!-- LEGEND ER IKKE "OMFATTET" AF "FELX"!? -->
+        <legend><h3>Form validering</h3></legend>
+        <label for="txtName">Type Your Name</label>
+        <input type="text" placeholder="Your Full Name" id="txtName" required />
+        <label for="txtNumber">Type Your Phone Number</label>
+        <input type="tel" placeholder="XXXX XXXX" id="txtNumber" />
+        <label for="txtEmail" form="txtEmail">Type Your Email</label>
+        <input
+          type="email"
+          placeholder="YourMail@XX.XX"
+          id="txtEmail"
+          required
+        />
+        <span class="error-message"></span>
+        <label for="txtArea">Write something:</label>
+        <textarea name="txtArea" id="txtArea" rows="12"></textarea>
+      </fieldset>
+      <!-- SIDSTE "FIELDSET" -->
+      <fieldset>
+        <input type="submit" />
+      </fieldset>
+    </form>
+  </body>
 </html>
